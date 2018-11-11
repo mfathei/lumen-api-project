@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "727499b8-695e-4ada-b710-232c196b7f29",
+		"name": "lumen-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/album",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"title\": \"\", \"track_count\": 7, \"release_date\": \"2030-12-05T01:02:03+00:00\" }"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/authors",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/authors",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "test2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test2@example.om",
+							"type": "text"
+						},
+						{
+							"key": "github",
+							"value": "git",
+							"type": "text"
+						},
+						{
+							"key": "twitter",
+							"value": "@mike",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "egypt",
+							"type": "text"
+						},
+						{
+							"key": "latest_article_published",
+							"value": "Test2 Article",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/authors",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/authors/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik1rTkRRa000UTBWRlJEWkJORUZCTmpCRE1URXhPVFUzT1RnNE1EQXhSVEZHUVVWRk16WkVOZyJ9.eyJpc3MiOiJodHRwczovL2F1dGhvcnMtYXBpLmF1dGgwLmNvbS8iLCJzdWIiOiJzM1EzYzhSUFFUbWpEbHFwQjY5RFlScWh3blU3QVIzM0BjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9hdXRob3JzYXBpLmNvbSIsImlhdCI6MTU0MTk0OTQxNCwiZXhwIjoxNTQyMDM1ODE0LCJhenAiOiJzM1EzYzhSUFFUbWpEbHFwQjY5RFlScWh3blU3QVIzMyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.uAzcfoUrlXVgAQnAADHXNgYvunWNIk1_aY-qP-LogNHnHccn69YCi7jj-a0CEx1Kz6tMaGYUsB7sfzlGglL8iHeiKJESs1vGIutZ5dxUr6YeYVYBhh6t57WZLtHatfoYLuP5KGuv45nM_ukvHAntdiYQQgGMj2qWAuXS5LTXwUKFNaqYvTv85gt6QCa7n_8r6xSRbD12e8MHNY-mwijmxN_-EK5x4zQgTRn1EpbKb3QrJJo4I0zMzjAZxS3W0YPcZgff0lRSaBI6c7eL_Xb9CRTdvo_O1Aj8hIDqdNE5I_zKvdl31HBd0Yi74DyYNysXSdFv7Z0QP0mOXTxOu_KlSQ",
+						"type": "text"
+					},
+					{
+						"key": "client_id",
+						"value": "s3Q3c8RPQTmjDlqpB69DYRqhwnU7AR33",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"title\": \"\", \"track_count\": 7, \"release_date\": \"2030-12-05T01:02:03+00:00\" }"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/authors/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"authors",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/authors/2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "latest_article_published",
+							"value": "Test3 Article",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "test2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test2@example.com",
+							"type": "text"
+						},
+						{
+							"key": "github",
+							"value": "gitlab better",
+							"type": "text"
+						},
+						{
+							"key": "twitter",
+							"value": "@mike",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/authors/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"authors",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
