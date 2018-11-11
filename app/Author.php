@@ -17,7 +17,10 @@ class Author extends Model
      * The attributes that are mass assignable
      * @var array
      */
-    protected $fillable = ['name', 'email', 'github', 'twitter', 'latest_article_published'];
+    protected $fillable = ['name', 'email', 'github', 'twitter', 'location', 'latest_article_published'];
 
+    /**
+     * {@inheritdoc}
+     */
     protected $hidden = [];
 }
