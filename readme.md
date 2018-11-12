@@ -23,3 +23,6 @@ The Lumen framework is open-sourced software licensed under the [MIT license](ht
 
 #### Tutorial:
 https://auth0.com/blog/developing-restful-apis-with-lumen/
+
+##### To run this API Documentation open this url:
+http://127.0.0.1:8000/docs/index.html

@@ -1,0 +1,107 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a sample API documentation project for lumen API project at https://github.com/mfathei/lumen-api-project",
+    "version": "1.0.0",
+    "title": "Authors API",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "oracle.dev10g@gmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "127.0.0.1:8000",
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "Authors",
+      "description": "Everything about your Authors",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "http://127.0.0.1:8000"
+      }
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/authors": {
+      "get": {
+        "tags": [
+          "authors"
+        ],
+        "summary": "Gets a list of all authors",
+        "description": "View all authors",
+        "operationId": "getAuthors",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Author"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Author": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string",
+          "format": "string"
+        },
+        "email": {
+          "type": "string",
+          "format": "string"
+        },
+        "github": {
+          "type": "string",
+          "format": "string"
+        },
+        "twitter": {
+          "type": "string",
+          "format": "string"
+        },
+        "location": {
+          "type": "string",
+          "format": "string"
+        },
+        "latest_article_published": {
+          "type": "string",
+          "format": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}
