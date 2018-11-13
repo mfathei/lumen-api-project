@@ -58,40 +58,88 @@
             "description": "Unauthorized"
           }
         }
+      },
+      "post": {
+        "tags": [
+          "authors"
+        ],
+        "summary": "Add a new author to the store",
+        "description": "",
+        "operationId": "addAuthor",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Author object that needs to be added to the store",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Author"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created Successfully",
+            "schema": {
+              "$ref": "#/definitions/Author"
+            }
+          },
+          "422": {
+            "description": "Validation error"
+          },
+          "500": {
+            "description": "MySQL database error"
+          }
+        }
       }
     }
   },
   "definitions": {
     "Author": {
       "type": "object",
+      "required": [
+        "name",
+        "email",
+        "github",
+        "twitter",
+        "location",
+        "latest_article_published"
+      ],
       "properties": {
         "id": {
           "type": "integer",
-          "format": "int64"
+          "format": "int64",
+          "example": 1
         },
         "name": {
           "type": "string",
-          "format": "string"
+          "example": "Mahdy"
         },
         "email": {
           "type": "string",
-          "format": "string"
+          "example": "mail@example.com"
         },
         "github": {
           "type": "string",
-          "format": "string"
+          "example": "https://github.com/mfathei"
         },
         "twitter": {
           "type": "string",
-          "format": "string"
+          "example": "@mahdy"
         },
         "location": {
           "type": "string",
-          "format": "string"
+          "example": "Cairo"
         },
         "latest_article_published": {
           "type": "string",
-          "format": "string"
+          "example": "Create Lumen API Documentation using Swagger"
         },
         "created_at": {
           "type": "string",

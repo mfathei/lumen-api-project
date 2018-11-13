@@ -15,4 +15,4 @@ https://auth0.com/blog/developing-restful-apis-with-lumen/
 
 ##### To run this API Documentation open this url:
 http://127.0.0.1:8000/docs/index.html
-click on `GET /authors` the click `Try it out` then click `Execute` button
+click on `GET /authors` then click `Try it out` then click `Execute` button

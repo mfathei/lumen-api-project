@@ -33,9 +33,13 @@ class AuthorController extends Controller
             'location' => 'required|alpha'
         ]);
 
-        $author = Author::create($request->all());
+        try {
+            $author = Author::create($request->all());
 
-        return response()->json($author, 201);
+            return response()->json($author, 201);
+        } catch(\PDOException $ex) {
+            return response()->json($ex->getMessage(), 500);
+        }
     }
 
     /**
